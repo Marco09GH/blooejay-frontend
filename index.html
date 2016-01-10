@@ -7,15 +7,16 @@
 </head>
 
 <body ng-controller="RestifyController as rest">
-    <div ng-repeat="movie in rest.movies">
+    <!--<div ng-repeat="movie in rest.movies">
         <h1> {{movie.title}} </h1>
         <h1> {{movie.year}} </h1>
-        <p> {{movie.imdb}}</p>
-        <!-- <button ng-show="product.canPurchase">Add to Cart</button> -->
+        <p> {{movie.imdb}}</p> -->
+
+    <!-- <button ng-show="product.canPurchase">Add to Cart</button> -->
 
 
 
-        <!-- <section ng-init="tab = 2">
+    <!-- <section ng-init="tab = 2">
 	<ul class="nav nav-pills">
 		<li ng-class="{ active:tab === 1 }" >
 		 <a href ng-click="tab = 1">Description</a> </li>
@@ -38,22 +39,28 @@
 </div>
 </section> -->
 
-    </div>
+    <!--</div>-->
 
-    <ul class="list-group">
-        <a href="#photo_wall" class="list-group-item active">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="list-group">
+                    <a href="#photo_wall" class="list-group-item active">
             Photo Wall
             <span class="badge">14</span>
         </a>
-        <a href="#albums" class="list-group-item">
+                    <a href="#albums" class="list-group-item">
             Albums
             <span class="badge">2</span>
         </a>
-        <a href="#favorites" class="list-group-item">
+                    <a href="#favorites" class="list-group-item">
             Favorites
             <span class="badge">1</span>
         </a>
-    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <!-- <h1 ng-controller="RestifyController as rest" style="color:steelblue">{{rest.greetings}}</h1>
  -->
