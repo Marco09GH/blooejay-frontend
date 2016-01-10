@@ -14,13 +14,13 @@ var npm = {
 	"angular": "angular/angular.min.js"
 }
 
-	gulp.src(paths.bower + bower["jquery"])
+	gulp.src(paths.npm + npm["jquery"])
 	.pipe(gulp.dest(paths.lib + "/jquery"));
 
-	gulp.src(paths.bower + bower["bootstrap"])
+	gulp.src(paths.npm + npm["bootstrap"])
 	.pipe(gulp.dest(paths.lib + "/bootstrap"));
 
-	gulp.src(paths.bower + bower["angular"])
+	gulp.src(paths.npm + npm["angular"])
 	.pipe(gulp.dest(paths.lib + "/angular"));
 
 });
