@@ -10,7 +10,7 @@ gulp.task('copy', function() {
 
 var npm = {
 	"jquery": "jquery/dist/*",
-	"bootstrap": "bootstrap/dist/*",
+	"bootstrap": "bootstrap/dist/**/*",
 	"angular": "angular/angular.min.js"
 }
 
