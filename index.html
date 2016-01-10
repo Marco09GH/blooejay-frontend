@@ -11,6 +11,16 @@
 <p> {{movie.imdb}}</p>
 <!-- <button ng-show="product.canPurchase">Add to Cart</button> -->
 
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#albums" role="tab" data-toggle="tab">Albums</a></li>
+    <li><a href="#favorites" role="tab" data-toggle="tab">Favorites</a></li>
+    <li><a href="#photo_wall" role="tab" data-toggle="tab">Photo Wall</a></li>
+</ul>
+
+<div class="tab-pane" id="albums">1</div>
+<div class="tab-pane" id="favorites">2</div>
+<div class="tab-pane" id="photo_wall">3</div>
+
 <!-- <section ng-init="tab = 2">
 	<ul class="nav nav-pills">
 		<li ng-class="{ active:tab === 1 }" >
