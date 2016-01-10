@@ -11,15 +11,7 @@
 <p> {{movie.imdb}}</p>
 <!-- <button ng-show="product.canPurchase">Add to Cart</button> -->
 
-<ul class="nav nav-tabs" role="tablist">
-    <li class="active"><a href="#albums" role="tab" data-toggle="tab">Albums</a></li>
-    <li><a href="#favorites" role="tab" data-toggle="tab">Favorites</a></li>
-    <li><a href="#photo_wall" role="tab" data-toggle="tab">Photo Wall</a></li>
-</ul>
 
-<div class="tab-pane" id="albums">1</div>
-<div class="tab-pane" id="favorites">2</div>
-<div class="tab-pane" id="photo_wall">3</div>
 
 <!-- <section ng-init="tab = 2">
 	<ul class="nav nav-pills">
@@ -46,10 +38,21 @@
 
 </div>
 
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#albums" role="tab" data-toggle="tab">Albums</a></li>
+    <li><a href="#favorites" role="tab" data-toggle="tab">Favorites</a></li>
+    <li><a href="#photo_wall" role="tab" data-toggle="tab">Photo Wall</a></li>
+</ul>
+
+<div class="tab-pane" id="albums">1</div>
+<div class="tab-pane" id="favorites">2</div>
+<div class="tab-pane" id="photo_wall">3</div>
+
 <!-- <h1 ng-controller="RestifyController as rest" style="color:steelblue">{{rest.greetings}}</h1>
  -->
 
 <script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>
+<script type="text/javascript" src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="app/app.module.js"></script>
 
 </body>
