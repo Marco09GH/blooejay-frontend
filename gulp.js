@@ -2,16 +2,16 @@ var gulp = require('gulp');
 
 var paths = {
 	webroot: "/usr/local/nginx/html/",
-	bower: "/home/ubuntu/bower_components/",
+	npm: "/usr/local/nginx/html/node_modules/",
 	lib: "/usr/local/nginx/html/assets/libs"
 };
 
 gulp.task('copy', function() {
 
-var bower = {
-	"jquery": "jquery/**/*",
-	"bootstrap": "bootstrap/**/*",
-	"angular": "angular/**/*"
+var npm = {
+	"jquery": "jquery/dist/*",
+	"bootstrap": "bootstrap/dist/*",
+	"angular": "angular/angular.min.js"
 }
 
 	gulp.src(paths.bower + bower["jquery"])
