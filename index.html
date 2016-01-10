@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html ng-app="store">
+
 <head>
-<title>Blooejay</title>
-<link rel="stylesheet" type="text/css" href="assets/css/theme/bootstrap.min.css" />
+    <title>Blooejay</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/theme/bootstrap.min.css" />
 </head>
+
 <body ng-controller="RestifyController as rest">
-<div ng-repeat="movie in rest.movies">
-<h1> {{movie.title}} </h1>
-<h1> {{movie.year}} </h1>
-<p> {{movie.imdb}}</p>
-<!-- <button ng-show="product.canPurchase">Add to Cart</button> -->
+    <div ng-repeat="movie in rest.movies">
+        <h1> {{movie.title}} </h1>
+        <h1> {{movie.year}} </h1>
+        <p> {{movie.imdb}}</p>
+        <!-- <button ng-show="product.canPurchase">Add to Cart</button> -->
 
 
 
-<!-- <section ng-init="tab = 2">
+        <!-- <section ng-init="tab = 2">
 	<ul class="nav nav-pills">
 		<li ng-class="{ active:tab === 1 }" >
 		 <a href ng-click="tab = 1">Description</a> </li>
@@ -36,30 +38,31 @@
 </div>
 </section> -->
 
-</div>
+    </div>
 
-<ul class="list-group">
-    <li class="list-group-item active">
-    <span class="badge">14</span>
-    <a href="#photo_wall">Photo Wall</a>
-  </li>
-  <li class="list-group-item">
-    <span class="badge">2</span>
-    <a href="#albums">Albums</a>
-  </li>
-  <li class="list-group-item">
-    <span class="badge">1</span>
-    <a href="#favorites">Favorites</a>
-  </li>
-</ul>
+    <ul class="list-group">
+        <li class="list-group-item active">
+            <a href="#photo_wall">Photo Wall</a>
+            <span class="badge">14</span>
+        </li>
+        <li class="list-group-item">
+            <a href="#albums">Albums</a>
+            <span class="badge">2</span>
+        </li>
+        <li class="list-group-item">
+            <a href="#favorites">Favorites</a>
+            <span class="badge">1</span>
+        </li>
+    </ul>
 
-<!-- <h1 ng-controller="RestifyController as rest" style="color:steelblue">{{rest.greetings}}</h1>
+    <!-- <h1 ng-controller="RestifyController as rest" style="color:steelblue">{{rest.greetings}}</h1>
  -->
 
-<script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>
-<script type="text/javascript" src="assets/libs/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="app/app.module.js"></script>
+    <script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>
+    <script type="text/javascript" src="assets/libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="app/app.module.js"></script>
 
 </body>
+
 </html>
