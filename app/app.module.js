@@ -72,7 +72,7 @@ var CommentBox = React.createClass({
 });
 
 ReactDOM.render(
-  <CommentBox url="/api/get_movies" />,
+  <CommentBox url="/api/movies" />,
   document.getElementById('albums')
 );
     

@@ -96,7 +96,7 @@
     }
   });
 
-  ReactDOM.render(React.createElement(CommentBox, { url: "/api/get_movies" }), document.getElementById('albums'));
+  ReactDOM.render(React.createElement(CommentBox, { url: "/api/movies" }), document.getElementById('albums'));
 
   /*var app = angular.module('store', []);
   
