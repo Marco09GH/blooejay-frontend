@@ -1,6 +1,10 @@
 (function () {
 
-  var data = [{ id: 1, author: "Pete Hunt", text: "This is one comment" }, { id: 2, author: "Jordan Walke", text: "This is *another* comment" }, { id: 3, author: "Mellanie Deam", text: "This is third!" }];
+  /*var data = [
+    {id: 1, author: "Pete Hunt", text: "This is one comment"},
+    {id: 2, author: "Jordan Walke", text: "This is *another* comment"},
+    {id: 3, author: "Mellanie Deam", text: "This is third!"}
+  ];*/
 
   var Comment = React.createClass({
     displayName: "Comment",
@@ -8,13 +12,22 @@
     render: function () {
       return React.createElement(
         "div",
-        { className: "comment" },
+        { className: "movie" },
+        React.createElement(
+          "h1",
+          null,
+          this.props.title
+        ),
         React.createElement(
           "h2",
-          { className: "commentAuthor" },
-          this.props.author
+          null,
+          this.props.year
         ),
-        this.props.children
+        React.createElement(
+          "p",
+          null,
+          this.props.children
+        )
       );
     }
   });
@@ -23,11 +36,11 @@
     displayName: "CommentList",
 
     render: function () {
-      var commentNodes = this.props.data.map(function (comment) {
+      var commentNodes = this.props.data.map(function (movie) {
         return React.createElement(
           Comment,
-          { author: comment.author, key: comment.id },
-          comment.text
+          { title: movie.title, year: movie.year },
+          movie.imdb
         );
       });
       return React.createElement(
@@ -78,13 +91,12 @@
           null,
           "Hello, world! I am a CommentBox."
         ),
-        React.createElement(CommentList, { data: this.state.data }),
-        React.createElement(CommentForm, null)
+        React.createElement(CommentList, { data: this.state.data })
       );
     }
   });
 
-  ReactDOM.render(React.createElement(CommentBox, { data: data }), document.getElementById('albums'));
+  ReactDOM.render(React.createElement(CommentBox, { url: "/api/get_movies" }), document.getElementById('albums'));
 
   /*var app = angular.module('store', []);
   

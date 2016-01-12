@@ -11,7 +11,7 @@ var Comment = React.createClass({
     return (
       <div className="movie">
         <h1>{this.props.title}</h1>
-        <h2>{this.props.year}</h1>
+        <h2>{this.props.year}</h2>
         <p>{this.props.children}</p>
       </div>
     );
@@ -66,7 +66,6 @@ var CommentBox = React.createClass({
       <div className="commentBox">
         <h1>Hello, world! I am a CommentBox.</h1>
         <CommentList data={this.state.data} />
-        /*<CommentForm />*/
       </div>
     );
   }
