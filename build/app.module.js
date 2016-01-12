@@ -1,4 +1,11 @@
 (function () {
+
+	ReactDOM.render(React.createElement(
+		'h1',
+		null,
+		'Hello, Marek!'
+	), document.getElementById('albums'));
+
 	var app = angular.module('store', []);
 
 	app.controller('StoreController', function () {

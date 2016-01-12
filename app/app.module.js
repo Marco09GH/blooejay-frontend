@@ -1,4 +1,10 @@
 (function(){
+
+ReactDOM.render(
+  <h1>Hello, Marek!</h1>,
+  document.getElementById('albums')
+);
+    
 var app = angular.module('store', []);
 
 app.controller('StoreController', function() {
