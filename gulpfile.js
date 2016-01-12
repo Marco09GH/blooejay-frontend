@@ -2,8 +2,8 @@ var gulp = require('gulp');
 
 var paths = {
 	webroot: "/usr/local/nginx/html/",
-	npm: "/usr/local/nginx/html/node_modules/",
-	lib: "/usr/local/nginx/html/assets/libs"
+	npm: "node_modules/",
+	lib: "assets/libs"
 };
 
 gulp.task('copy', function() {
@@ -11,7 +11,9 @@ gulp.task('copy', function() {
 var npm = {
 	"jquery": "jquery/dist/*",
 	"bootstrap": "bootstrap/dist/**/*",
-	"angular": "angular/angular.min.js"
+	"angular": "angular/angular.min.js",
+    "react": "react/dist/*",
+    "react-dom": "react-dom/dist/*"
 }
 
 	gulp.src(paths.npm + npm["jquery"])
@@ -22,5 +24,11 @@ var npm = {
 
 	gulp.src(paths.npm + npm["angular"])
 	.pipe(gulp.dest(paths.lib + "/angular"));
+    
+    gulp.src(paths.npm + npm["react"])
+	.pipe(gulp.dest(paths.lib + "/react"));
+    
+    gulp.src(paths.npm + npm["react-dom"])
+	.pipe(gulp.dest(paths.lib + "/react-dom"));
 
 });
