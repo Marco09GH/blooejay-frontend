@@ -26,7 +26,7 @@
         { className: "commentList" },
         React.createElement(
           Comment,
-          { author: "Pete Hunt" },
+          { author: "Pete Hunter" },
           "This is one comment"
         ),
         React.createElement(
