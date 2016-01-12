@@ -6,3 +6,7 @@
     color: #3876a8;
     font-size: 36px;
 }
+
+.navbar-nav.nav-justified > li{
+    float:none;
+}
