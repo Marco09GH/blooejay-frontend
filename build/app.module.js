@@ -1,5 +1,7 @@
 (function () {
 
+  var data = [{ id: 1, author: "Pete Hunt", text: "This is one comment" }, { id: 2, author: "Jordan Walke", text: "This is *another* comment" }, { id: 3, author: "Mellanie Deam", text: "This is third!" }];
+
   var Comment = React.createClass({
     displayName: "Comment",
 
@@ -12,7 +14,7 @@
           { className: "commentAuthor" },
           this.props.author
         ),
-        marked(this.props.children.toString())
+        this.props.children
       );
     }
   });
@@ -21,19 +23,17 @@
     displayName: "CommentList",
 
     render: function () {
+      var commentNodes = this.props.data.map(function (comment) {
+        return React.createElement(
+          Comment,
+          { author: comment.author, key: comment.id },
+          comment.text
+        );
+      });
       return React.createElement(
         "div",
         { className: "commentList" },
-        React.createElement(
-          Comment,
-          { author: "Pete Hunter" },
-          "This is one comment"
-        ),
-        React.createElement(
-          Comment,
-          { author: "Jordan Walke" },
-          "This is *another* comment"
-        )
+        commentNodes
       );
     }
   });
@@ -62,12 +62,12 @@
           null,
           "Hello, world! I am a CommentBox."
         ),
-        React.createElement(CommentList, null),
+        React.createElement(CommentList, { data: this.props.data }),
         React.createElement(CommentForm, null)
       );
     }
   });
-  ReactDOM.render(React.createElement(CommentBox, null), document.getElementById('albums'));
+  ReactDOM.render(React.createElement(CommentBox, { data: data }), document.getElementById('albums'));
 
   var app = angular.module('store', []);
 

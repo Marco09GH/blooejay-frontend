@@ -1,5 +1,11 @@
 (function(){
     
+var data = [
+  {id: 1, author: "Pete Hunt", text: "This is one comment"},
+  {id: 2, author: "Jordan Walke", text: "This is *another* comment"},
+  {id: 3, author: "Mellanie Deam", text: "This is third!"}
+];
+    
 var Comment = React.createClass({
   render: function() {
     return (
@@ -7,7 +13,7 @@ var Comment = React.createClass({
         <h2 className="commentAuthor">
           {this.props.author}
         </h2>
-        {marked(this.props.children.toString())}
+        {this.props.children}
       </div>
     );
   }
@@ -16,11 +22,15 @@ var Comment = React.createClass({
 
 var CommentList = React.createClass({
   render: function() {
+    var commentNodes = this.props.data.map(function(comment) {
+        return (
+            <Comment author={comment.author} key={comment.id}>{comment.text}</Comment>
+        );    
+    });
     return (
       <div className="commentList">
-        <Comment author="Pete Hunter">This is one comment</Comment>
-        <Comment author="Jordan Walke">This is *another* comment</Comment>
-      </div>
+        {commentNodes}
+      </div>  
     );
   }
 });
@@ -40,14 +50,14 @@ var CommentBox = React.createClass({
     return (
       <div className="commentBox">
         <h1>Hello, world! I am a CommentBox.</h1>
-        <CommentList />
+        <CommentList data={this.props.data} />
         <CommentForm />
       </div>
     );
   }
 });
 ReactDOM.render(
-  <CommentBox />,
+  <CommentBox data={data} />,
   document.getElementById('albums')
 );
     
