@@ -19,3 +19,7 @@
    margin-top: -13px;
    display: inline-block;
 }
+
+.navbar-form .form-group {
+    align-content: center;
+}
