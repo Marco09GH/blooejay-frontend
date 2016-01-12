@@ -1,27 +1,34 @@
 (function () {
 
-	ReactDOM.render(React.createElement(
-		'h1',
-		null,
-		'Hello, Marek!'
-	), document.getElementById('albums'));
+  var CommentBox = React.createClass({
+    displayName: 'CommentBox',
 
-	var app = angular.module('store', []);
+    render: function () {
+      return React.createElement(
+        'div',
+        { className: 'commentBox' },
+        'Hello, world! I am a CommentBox.'
+      );
+    }
+  });
+  ReactDOM.render(React.createElement(CommentBox, null), document.getElementById('content'));
 
-	app.controller('StoreController', function () {
-		this.products = gems;
-	});
+  var app = angular.module('store', []);
 
-	app.controller('RestifyController', ['$http', function ($http) {
+  app.controller('StoreController', function () {
+    this.products = gems;
+  });
 
-		this.movies = "";
+  app.controller('RestifyController', ['$http', function ($http) {
 
-		var temp = this;
+    this.movies = "";
 
-		$http.get('/api/get_movies').success(function (data) {
-			temp.movies = data;
-		}).error(function (e) {
-			//temp.greetings = e.message;
-		});
-	}]);
+    var temp = this;
+
+    $http.get('/api/get_movies').success(function (data) {
+      temp.movies = data;
+    }).error(function (e) {
+      //temp.greetings = e.message;
+    });
+  }]);
 })();

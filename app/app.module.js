@@ -1,8 +1,17 @@
 (function(){
 
+var CommentBox = React.createClass({
+  render: function() {
+    return (
+      <div className="commentBox">
+        Hello, world! I am a CommentBox.
+      </div>
+    );
+  }
+});
 ReactDOM.render(
-  <h1>Hello, Marek!</h1>,
-  document.getElementById('albums')
+  <CommentBox />,
+  document.getElementById('content')
 );
     
 var app = angular.module('store', []);
