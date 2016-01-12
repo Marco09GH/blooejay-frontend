@@ -11,7 +11,7 @@
       );
     }
   });
-  ReactDOM.render(React.createElement(CommentBox, null), document.getElementById('content'));
+  ReactDOM.render(React.createElement(CommentBox, null), document.getElementById('albums'));
 
   var app = angular.module('store', []);
 

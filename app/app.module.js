@@ -11,7 +11,7 @@ var CommentBox = React.createClass({
 });
 ReactDOM.render(
   <CommentBox />,
-  document.getElementById('content')
+  document.getElementById('albums')
 );
     
 var app = angular.module('store', []);
