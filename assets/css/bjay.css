@@ -2,7 +2,7 @@
     font-size: 48px;
 }
 
-.navbar-brand {
+.navbar-default .navbar-brand {
     color: #3876a8;
-    font-size: 48px;
+    font-size: 36px;
 }
