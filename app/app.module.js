@@ -72,19 +72,19 @@ var CommentBox = React.createClass({
 });
 
 class PhotoWall extends React.Component { 
-    getInitialState() {
-      return { clickCount: 0};  
-    }
     
+    constructor() {
+        super();
+        this.state = {count : 0};
+    }
+        
     handleClick() {
-      this.setState(function(state) {
-         return { clickCount: state.clickCount + 1}; 
-      });  
+      this.setState({count: this.state.count + 1}); 
     }
     
     render() {
        return (
-         <h1 onClick={this.handleClick}> Photo Wall: {this.state.clickCount} </h1>  
+         <h1 onClick={this.handleClick.bind(this)}> Photo Wall: {this.state.count} </h1>  
        );
    } 
 }

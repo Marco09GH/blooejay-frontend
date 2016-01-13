@@ -112,29 +112,25 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
     function PhotoWall() {
       _classCallCheck(this, PhotoWall);
 
-      return _possibleConstructorReturn(this, Object.getPrototypeOf(PhotoWall).apply(this, arguments));
+      var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(PhotoWall).call(this));
+
+      _this.state = { count: 0 };
+      return _this;
     }
 
     _createClass(PhotoWall, [{
-      key: "getInitialState",
-      value: function getInitialState() {
-        return { clickCount: 0 };
-      }
-    }, {
       key: "handleClick",
       value: function handleClick() {
-        this.setState(function (state) {
-          return { clickCount: state.clickCount + 1 };
-        });
+        this.setState({ count: this.state.count + 1 });
       }
     }, {
       key: "render",
       value: function render() {
         return React.createElement(
           "h1",
-          { onClick: this.handleClick },
+          { onClick: this.handleClick.bind(this) },
           " Photo Wall: ",
-          this.state.clickCount,
+          this.state.count,
           " "
         );
       }
