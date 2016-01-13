@@ -89,7 +89,7 @@
         React.createElement(
           "h1",
           null,
-          "Hello, world! I am a CommentBox."
+          "Hello, world! I am Mark"
         ),
         React.createElement(CommentList, { data: this.state.data })
       );
