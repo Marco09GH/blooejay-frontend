@@ -71,21 +71,23 @@ var CommentBox = React.createClass({
   }
 });
 
-var PhotoWall = React.createClass({
-    getInitialState: function() {
+class PhotoWall extends React.Component { 
+    getInitialState() {
       return { clickCount: 0};  
-    },
-    handleClick: function() {
+    }
+    
+    handleClick() {
       this.setState(function(state) {
          return { clickCount: state.clickCount + 1}; 
       });  
-    },
-   render: function() {
+    }
+    
+    render() {
        return (
          <h1 onClick={this.handleClick}> Photo Wall: {this.state.clickCount} </h1>  
        );
    } 
-});
+}
 
 ReactDOM.render(
   <CommentBox url="/api/movies" />,

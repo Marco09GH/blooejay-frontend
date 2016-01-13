@@ -96,18 +96,18 @@
     }
   });
 
-  var PhotoWall = React.createClass({
-    displayName: "PhotoWall",
-
-    getInitialState: function () {
+  class PhotoWall extends React.Component {
+    getInitialState() {
       return { clickCount: 0 };
-    },
-    handleClick: function () {
+    }
+
+    handleClick() {
       this.setState(function (state) {
         return { clickCount: state.clickCount + 1 };
       });
-    },
-    render: function () {
+    }
+
+    render() {
       return React.createElement(
         "h1",
         { onClick: this.handleClick },
@@ -116,7 +116,7 @@
         " "
       );
     }
-  });
+  }
 
   ReactDOM.render(React.createElement(CommentBox, { url: "/api/movies" }), document.getElementById('albums'));
 
