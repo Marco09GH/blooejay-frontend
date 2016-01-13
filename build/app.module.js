@@ -1,3 +1,13 @@
+"use strict";
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 (function () {
 
   /*var data = [
@@ -9,7 +19,7 @@
   var Comment = React.createClass({
     displayName: "Comment",
 
-    render: function () {
+    render: function render() {
       return React.createElement(
         "div",
         { className: "movie" },
@@ -35,7 +45,7 @@
   var CommentList = React.createClass({
     displayName: "CommentList",
 
-    render: function () {
+    render: function render() {
       var commentNodes = this.props.data.map(function (movie) {
         return React.createElement(
           Comment,
@@ -54,7 +64,7 @@
   var CommentForm = React.createClass({
     displayName: "CommentForm",
 
-    render: function () {
+    render: function render() {
       return React.createElement(
         "div",
         { className: "commentForm" },
@@ -66,10 +76,10 @@
   var CommentBox = React.createClass({
     displayName: "CommentBox",
 
-    getInitialState: function () {
+    getInitialState: function getInitialState() {
       return { data: [] };
     },
-    componentDidMount: function () {
+    componentDidMount: function componentDidMount() {
       $.ajax({
         url: this.props.url,
         dataType: 'json',
@@ -82,7 +92,7 @@
         }.bind(this)
       });
     },
-    render: function () {
+    render: function render() {
       return React.createElement(
         "div",
         { className: "commentBox" },
@@ -96,27 +106,42 @@
     }
   });
 
-  class PhotoWall extends React.Component {
-    getInitialState() {
-      return { clickCount: 0 };
+  var PhotoWall = function (_React$Component) {
+    _inherits(PhotoWall, _React$Component);
+
+    function PhotoWall() {
+      _classCallCheck(this, PhotoWall);
+
+      return _possibleConstructorReturn(this, Object.getPrototypeOf(PhotoWall).apply(this, arguments));
     }
 
-    handleClick() {
-      this.setState(function (state) {
-        return { clickCount: state.clickCount + 1 };
-      });
-    }
+    _createClass(PhotoWall, [{
+      key: "getInitialState",
+      value: function getInitialState() {
+        return { clickCount: 0 };
+      }
+    }, {
+      key: "handleClick",
+      value: function handleClick() {
+        this.setState(function (state) {
+          return { clickCount: state.clickCount + 1 };
+        });
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        return React.createElement(
+          "h1",
+          { onClick: this.handleClick },
+          " Photo Wall: ",
+          this.state.clickCount,
+          " "
+        );
+      }
+    }]);
 
-    render() {
-      return React.createElement(
-        "h1",
-        { onClick: this.handleClick },
-        " Photo Wall: ",
-        this.state.clickCount,
-        " "
-      );
-    }
-  }
+    return PhotoWall;
+  }(React.Component);
 
   ReactDOM.render(React.createElement(CommentBox, { url: "/api/movies" }), document.getElementById('albums'));
 
