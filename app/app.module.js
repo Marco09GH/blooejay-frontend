@@ -72,9 +72,17 @@ var CommentBox = React.createClass({
 });
 
 var PhotoWall = React.createClass({
+    getInitialState: function() {
+      return { clickCount: 0};  
+    },
+    handleClick: function() {
+      this.setState(function(state) {
+         return { clickCount: state.clickCount + 1}; 
+      });  
+    },
    render: function() {
        return (
-         <h1> Photo Wall </h1>  
+         <h1 onClick={this.handleClick}> Photo Wall: {this.state.clickCount} </h1>  
        );
    } 
 });

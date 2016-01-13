@@ -99,11 +99,21 @@
   var PhotoWall = React.createClass({
     displayName: "PhotoWall",
 
+    getInitialState: function () {
+      return { clickCount: 0 };
+    },
+    handleClick: function () {
+      this.setState(function (state) {
+        return { clickCount: state.clickCount + 1 };
+      });
+    },
     render: function () {
       return React.createElement(
         "h1",
-        null,
-        " Photo Wall "
+        { onClick: this.handleClick },
+        " Photo Wall: ",
+        this.state.clickCount,
+        " "
       );
     }
   });
