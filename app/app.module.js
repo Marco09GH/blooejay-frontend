@@ -71,9 +71,22 @@ var CommentBox = React.createClass({
   }
 });
 
+var PhotoWall = React.createClass({
+   render: function() {
+       return (
+         <h1> Photo Wall </h1>  
+       );
+   } 
+});
+
 ReactDOM.render(
   <CommentBox url="/api/movies" />,
   document.getElementById('albums')
+);
+
+ReactDOM.render(
+<PhotoWall />,    
+document.getElementById('photo_wall')    
 );
     
 /*var app = angular.module('store', []);

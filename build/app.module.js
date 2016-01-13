@@ -96,7 +96,21 @@
     }
   });
 
+  var PhotoWall = React.createClass({
+    displayName: "PhotoWall",
+
+    render: function () {
+      return React.createElement(
+        "h1",
+        null,
+        " Photo Wall "
+      );
+    }
+  });
+
   ReactDOM.render(React.createElement(CommentBox, { url: "/api/movies" }), document.getElementById('albums'));
+
+  ReactDOM.render(React.createElement(PhotoWall, null), document.getElementById('photo_wall'));
 
   /*var app = angular.module('store', []);
   
