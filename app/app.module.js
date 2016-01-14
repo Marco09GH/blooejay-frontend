@@ -44,11 +44,15 @@ var CommentForm = React.createClass({
   }
 });
 
-var CommentBox = React.createClass({
-  getInitialState: function() {
-    return {data: []};
-  },
-  componentDidMount: function() {
+
+class CommentBox extends React.Component {
+    
+  constructor() {
+      super();
+      this.state = {data : []};
+  }  
+  
+  componentDidMount() {
     $.ajax({
       url: this.props.url,
       dataType: 'json',
@@ -60,8 +64,9 @@ var CommentBox = React.createClass({
         console.error(this.props.url, status, err.toString());
       }.bind(this)
     });
-  },
-  render: function() {
+  }
+  
+  render() {
     return (
       <div className="commentBox">
         <h1>Hello, world! I am Mark</h1>
@@ -69,7 +74,7 @@ var CommentBox = React.createClass({
       </div>
     );
   }
-});
+}
 
 class PhotoWall extends React.Component { 
     

@@ -73,49 +73,62 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
     }
   });
 
-  var CommentBox = React.createClass({
-    displayName: "CommentBox",
+  var CommentBox = function (_React$Component) {
+    _inherits(CommentBox, _React$Component);
 
-    getInitialState: function getInitialState() {
-      return { data: [] };
-    },
-    componentDidMount: function componentDidMount() {
-      $.ajax({
-        url: this.props.url,
-        dataType: 'json',
-        cache: false,
-        success: function (data) {
-          this.setState({ data: data });
-        }.bind(this),
-        error: function (xhr, status, err) {
-          console.error(this.props.url, status, err.toString());
-        }.bind(this)
-      });
-    },
-    render: function render() {
-      return React.createElement(
-        "div",
-        { className: "commentBox" },
-        React.createElement(
-          "h1",
-          null,
-          "Hello, world! I am Mark"
-        ),
-        React.createElement(CommentList, { data: this.state.data })
-      );
+    function CommentBox() {
+      _classCallCheck(this, CommentBox);
+
+      var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(CommentBox).call(this));
+
+      _this.state = { data: [] };
+      return _this;
     }
-  });
 
-  var PhotoWall = function (_React$Component) {
-    _inherits(PhotoWall, _React$Component);
+    _createClass(CommentBox, [{
+      key: "componentDidMount",
+      value: function componentDidMount() {
+        $.ajax({
+          url: this.props.url,
+          dataType: 'json',
+          cache: false,
+          success: function (data) {
+            this.setState({ data: data });
+          }.bind(this),
+          error: function (xhr, status, err) {
+            console.error(this.props.url, status, err.toString());
+          }.bind(this)
+        });
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        return React.createElement(
+          "div",
+          { className: "commentBox" },
+          React.createElement(
+            "h1",
+            null,
+            "Hello, world! I am Mark"
+          ),
+          React.createElement(CommentList, { data: this.state.data })
+        );
+      }
+    }]);
+
+    return CommentBox;
+  }(React.Component);
+
+  var PhotoWall = function (_React$Component2) {
+    _inherits(PhotoWall, _React$Component2);
 
     function PhotoWall() {
       _classCallCheck(this, PhotoWall);
 
-      var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(PhotoWall).call(this));
+      var _this2 = _possibleConstructorReturn(this, Object.getPrototypeOf(PhotoWall).call(this));
 
-      _this.state = { count: 0 };
-      return _this;
+      _this2.state = { count: 0 };
+      return _this2;
     }
 
     _createClass(PhotoWall, [{
