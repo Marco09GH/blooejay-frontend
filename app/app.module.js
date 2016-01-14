@@ -1,3 +1,5 @@
+import Link from 'components';
+
 (function(){
     
 /*var data = [
@@ -90,6 +92,7 @@ class PhotoWall extends React.Component {
     
     render() {
        return (
+         <Link />  
          <h1 onClick={this.handleClick.bind(this)}> Photo Wall: {this.state.count} </h1>  
        );
    } 
