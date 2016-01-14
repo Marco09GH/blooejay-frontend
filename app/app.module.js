@@ -1,6 +1,11 @@
 import Link from 'components/photowall';
 
-(function(){
+ReactDOM.render(
+<Link />,    
+document.getElementById('photo_wall')    
+);
+
+/*(function(){*/
     
 /*var data = [
   {id: 1, author: "Pete Hunt", text: "This is one comment"},
@@ -8,7 +13,7 @@ import Link from 'components/photowall';
   {id: 3, author: "Mellanie Deam", text: "This is third!"}
 ];*/
     
-var Comment = React.createClass({
+/*var Comment = React.createClass({
   render: function() {
     return (
       <div className="movie">
@@ -108,7 +113,7 @@ ReactDOM.render(
 ReactDOM.render(
 <PhotoWall />,    
 document.getElementById('photo_wall')    
-);
+); */
     
 /*var app = angular.module('store', []);
 
@@ -128,4 +133,4 @@ app.controller('RestifyController', ['$http', function($http) {
 	}); 
 }]);*/ 
 
-})();
+/*})();*/
