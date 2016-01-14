@@ -92,8 +92,10 @@ class PhotoWall extends React.Component {
     
     render() {
        return (
-         <Link />  
-         <h1 onClick={this.handleClick.bind(this)}> Photo Wall: {this.state.count} </h1>  
+         <div>
+            <Link />  
+            <h1 onClick={this.handleClick.bind(this)}> Photo Wall: {this.state.count} </h1>
+         </div>  
        );
    } 
 }
