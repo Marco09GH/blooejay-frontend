@@ -61,28 +61,39 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
     }
   });
 
-  var CommentForm = React.createClass({
-    displayName: "CommentForm",
+  var CommentForm = function (_React$Component) {
+    _inherits(CommentForm, _React$Component);
 
-    render: function render() {
-      return React.createElement(
-        "div",
-        { className: "commentForm" },
-        "Hello, world! I am a CommentForm."
-      );
+    function CommentForm() {
+      _classCallCheck(this, CommentForm);
+
+      return _possibleConstructorReturn(this, Object.getPrototypeOf(CommentForm).apply(this, arguments));
     }
-  });
 
-  var CommentBox = function (_React$Component) {
-    _inherits(CommentBox, _React$Component);
+    _createClass(CommentForm, [{
+      key: "render",
+      value: function render() {
+        return React.createElement(
+          "div",
+          { className: "commentForm" },
+          "Hello, world! I am a CommentForm."
+        );
+      }
+    }]);
+
+    return CommentForm;
+  }(React.Component);
+
+  var CommentBox = function (_React$Component2) {
+    _inherits(CommentBox, _React$Component2);
 
     function CommentBox() {
       _classCallCheck(this, CommentBox);
 
-      var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(CommentBox).call(this));
+      var _this2 = _possibleConstructorReturn(this, Object.getPrototypeOf(CommentBox).call(this));
 
-      _this.state = { data: [] };
-      return _this;
+      _this2.state = { data: [] };
+      return _this2;
     }
 
     _createClass(CommentBox, [{
@@ -119,16 +130,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
     return CommentBox;
   }(React.Component);
 
-  var PhotoWall = function (_React$Component2) {
-    _inherits(PhotoWall, _React$Component2);
+  var PhotoWall = function (_React$Component3) {
+    _inherits(PhotoWall, _React$Component3);
 
     function PhotoWall() {
       _classCallCheck(this, PhotoWall);
 
-      var _this2 = _possibleConstructorReturn(this, Object.getPrototypeOf(PhotoWall).call(this));
+      var _this3 = _possibleConstructorReturn(this, Object.getPrototypeOf(PhotoWall).call(this));
 
-      _this2.state = { count: 0 };
-      return _this2;
+      _this3.state = { count: 0 };
+      return _this3;
     }
 
     _createClass(PhotoWall, [{

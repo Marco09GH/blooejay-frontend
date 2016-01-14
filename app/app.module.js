@@ -34,15 +34,16 @@ var CommentList = React.createClass({
   }
 });
 
-var CommentForm = React.createClass({
-  render: function() {
+class CommentForm extends React.Component {
+    
+  render() {
     return (
       <div className="commentForm">
         Hello, world! I am a CommentForm.
       </div>
     );
   }
-});
+}
 
 
 class CommentBox extends React.Component {
