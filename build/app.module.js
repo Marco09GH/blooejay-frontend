@@ -1,6 +1,6 @@
 'use strict';
 
-var _photowall = require('components/photowall');
+var _photowall = require('./components/photowall');
 
 var _photowall2 = _interopRequireDefault(_photowall);
 
