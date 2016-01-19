@@ -13,9 +13,7 @@
     "babelify": "^7.2.0",
     "bootstrap": "^3.3.6",
     "gulp": "^3.9.0",
-    "jquery": "^2.2.0",
-    "react": "^0.14.6",
-    "react-dom": "^0.14.6"
+    "jquery": "^2.2.0"
   },
   "repository": {
     "type": "git",
@@ -26,7 +24,10 @@
     "babel-preset-es2015": "^6.3.13"
   },
   "jspm": {
-      "dependencies": {},
+      "dependencies": {
+          "fetch": "npm:whatwg-fetch@^0.11.0",
+          "react": "npm:react@^0.14.6"
+      },
       "devDependencies": {
           "babel": "npm:babel-core@^5.8.24",
           "babel-runtime": "npm:babel-runtime@^5.8.24",
