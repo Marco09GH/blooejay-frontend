@@ -1,6 +1,14 @@
-import 'fetch'
+import 'fetch';
 
-console.log("Hello, Marek!");
+import React from 'react';
+
+class HelloWorld extends React.Component {
+    render() {
+        return <p>hello, marek!</p>;
+    }
+} 
+
+React.render(<HelloWorld />, document.body);
 
 /*import Link from 'components/photowall';
 
