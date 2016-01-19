@@ -12,11 +12,16 @@
     <meta name="copyright" content="Copyright 2016 ACTech" />
     <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/bjay.css" />
-    <script type="text/javascript" src="assets/libs/react/react.min.js"></script>
-    <script type="text/javascript" src="assets/libs/react-dom/react-dom.min.js"></script>
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+        System.import('app/app.module');
+    </script>
 </head>
 
-<body ng-controller="RestifyController as rest">
+<body></body>
+
+<!--<body ng-controller="RestifyController as rest">
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -45,7 +50,7 @@
                 </form>
             </div>
         </div>
-    </nav>
+    </nav> -->
     <!--<div ng-repeat="movie in rest.movies">
         <h1> {{movie.title}} </h1>
         <h1> {{movie.year}} </h1>
@@ -80,7 +85,7 @@
 
     <!--</div>-->
 
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2">
                 <div class="jumbotron"></div>
@@ -104,7 +109,7 @@
                 <div id="photo_wall" class="tab-pane fade in active"></div>
                 <div id="albums" class="tab-pane fade">
                     <!--<span class="glyphicon glyphicon-plus"></span>-->
-                </div>
+         <!--       </div>
                 <div id="favorites" class="tab-pane fade">3</div>
             </div>
         </div>
@@ -113,11 +118,10 @@
     <!-- <h1 ng-controller="RestifyController as rest" style="color:steelblue">{{rest.greetings}}</h1>
  -->
 
-    <script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>
+    <!--<script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>
     <script type="text/javascript" src="assets/libs/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="build/bundle.js"></script>
 
-</body>
+</body>-->
 
 </html>

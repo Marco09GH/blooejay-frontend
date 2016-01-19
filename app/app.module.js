@@ -1,9 +1,11 @@
-import Link from 'components/photowall';
+console.log("Hello, Marek!");
+
+/*import Link from 'components/photowall';
 
 ReactDOM.render(
 <Link />,    
 document.getElementById('photo_wall')    
-);
+); 
 
 /*(function(){*/
     

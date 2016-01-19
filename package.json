@@ -3,6 +3,10 @@
   "version": "0.1.10",
   "description": "BlooeJay Gallery Web App",
   "author": "Marek Pietrzak <marek.pietrzak@actech.pl>",
+  "main" : "app.module.js",
+  "scripts": {
+    "test": "echo \"Error: No test specified\" && exit 1"  
+  },
   "dependencies": {
     "angular": "^1.4.8",
     "babel-preset-react": "^6.3.13",
