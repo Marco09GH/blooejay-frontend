@@ -24,5 +24,13 @@
   "licence": "GPL-3.0",
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13"
+  },
+  "jspm": {
+      "dependencies": {},
+      "devDependencies": {
+          "babel": "npm:babel-core@^5.8.24",
+          "babel-runtime": "npm:babel-runtime@^5.8.24",
+          "core-js": "npm:core-js@^1.1.4"
+      }
   }
 }
