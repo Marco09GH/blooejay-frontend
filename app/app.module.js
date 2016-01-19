@@ -1,3 +1,5 @@
+import 'fetch'
+
 console.log("Hello, Marek!");
 
 /*import Link from 'components/photowall';
